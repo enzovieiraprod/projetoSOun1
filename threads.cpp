@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
     }
     int n1, m1, n2, m2;
 
-    //Lê as matrizes antes de criar threads
+    //Para ler as matrizes antes de criar threads
     A = ler_matriz(argv[1], n1, m1);
     B = ler_matriz(argv[2], n2, m2);
 
