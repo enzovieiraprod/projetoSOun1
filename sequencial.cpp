@@ -15,12 +15,12 @@ std::vector<std::vector<int>> ler_matriz(const std::string &nomeArq, int &linhas
         exit(1);
     }
 
-    //Lê as dimensões da matriz
+    //Para ler as dimensões da matriz
     file >> linhas >> colunas;
 
     std::vector<std::vector<int>> matriz(linhas, std::vector<int>(colunas));
 
-    //Lê os valores
+    //Para ler os valores
     for (int i = 0; i < linhas; i++) {
         for (int j = 0; j < colunas; j++) {
             file >> matriz[i][j];
@@ -31,7 +31,7 @@ std::vector<std::vector<int>> ler_matriz(const std::string &nomeArq, int &linhas
     return matriz;
 }
 
-// Função para multiplicar matrizes
+//Função para multiplicar matrizes
 std::vector<std::vector<int>> multiplicar(
     const std::vector<std::vector<int>> &A,
     const std::vector<std::vector<int>> &B,
@@ -50,7 +50,7 @@ std::vector<std::vector<int>> multiplicar(
     return C;
 }
 
-//Função para salvar resultado
+//Função para salvar o resultado
 void salvar_resultado(const std::string &nomeArquivo,
                       const std::vector<std::vector<int>> &C,
                       int linhas, int colunas,
@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
 
     int n1, m1, n2, m2;
 
-    //Lê as matrizes dos arquivos
+    //Para ler as matrizes dos arquivos
     std::vector<std::vector<int>> A = ler_matriz(argv[1], n1, m1);
     std::vector<std::vector<int>> B = ler_matriz(argv[2], n2, m2);
 
