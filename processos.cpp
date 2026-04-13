@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
 
     int n1, m1, n2, m2;
 
-    // Lê antes de criar processos
+    //Para ler antes de criar processos
     A = ler_matriz(argv[1], n1, m1);
     B = ler_matriz(argv[2], n2, m2);
 
@@ -97,7 +97,7 @@ int main(int argc, char *argv[]) {
         pid_t pid = fork();
 
         if (pid == 0) {
-            // Processo filho
+            //Processo filho
             calcular_parte(i, inicio, fim, m1, m2);
             exit(0);
         }
@@ -105,7 +105,7 @@ int main(int argc, char *argv[]) {
         inicio = fim;
     }
 
-    // Processo pai espera todos os filhos
+    //Processo pai espera todos os filhos
     for (int i = 0; i < P; i++) {
         wait(NULL);
     }
